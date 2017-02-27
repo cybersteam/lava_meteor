@@ -35,3 +35,7 @@ zimme:active-route
 gwendall:auth-client-callbacks
 reactive-dict
 accounts-google
+accounts-base
+accounts-ui
+accounts-password
+google-config-ui
