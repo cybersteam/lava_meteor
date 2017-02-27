@@ -1,0 +1,73 @@
+<!--This is the home page which get's called by routes.js for the index URL-->
+
+<template name="HomeLayout">
+        <div class="container">
+        <header>
+            
+            
+            <h1>Home</h1> {{> loginButtons}} 
+            <br>
+            <!--this is just a button for testing-->
+            <button id="togglebtn">☰ </button>
+             
+        
+            <div class="logo">
+                <p><img src="/logo.png"/></p>
+            </div>
+        
+       
+        </header>
+        
+       
+
+        <main>
+           <div class="welcome">
+               <h2>Choose your Question:</h2>
+               <td>
+               <h3>What in the world would you like to see?</h3>
+               <input type="text" id="randInput"
+               onchange="var dataEntered=document.getElementById('randInput').value;
+               alert('User Typed' + dataEntered)">
+
+
+               <h3>What in the world would you like to do?</h3>
+               <input type="text" id="randInput"
+               onchange="var dataEntered=document.getElementById('randInput').value;
+               alert('User Typed' + dataEntered)">
+               </td>
+               
+               <h3>What in the world would you like to say?</h3>
+               <input type="text" id="randInput"
+               onchange="var dataEntered=document.getElementById('randInput').value;
+               alert('User Typed' + dataEntered)">
+
+               
+               <h3>What in the world would you like to know?</h3>
+               <input type="text" id="randInput"
+               onchange="var dataEntered=document.getElementById('randInput').value;
+               alert('User Typed' + dataEntered)">
+
+               
+               <h3>What in the world would you like to make?</h3>
+               <input type="text" id="randInput"
+               onchange="var dataEntered=document.getElementById('randInput').value;
+               alert('User Typed' + dataEntered)">
+
+               
+               <h3>Where in the world would you like to go to?</h3>
+               <input type="text" id="randInput"
+               onchange="var dataEntered=document.getElementById('randInput').value;
+               alert('User Typed' + dataEntered)">
+
+               <h3>What in the world do you need to get?</h3>
+               <input type="text" id="randInput"
+               onchange="var dataEntered=document.getElementById('randInput').value;
+               alert('User Typed' + dataEntered)">
+               
+           </div>
+        </main>
+
+        <div class="footer">LAVA Version 0.3
+       </div>
+        </div>
+</template>

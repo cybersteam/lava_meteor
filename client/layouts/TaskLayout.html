@@ -1,0 +1,84 @@
+
+
+    
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>-->
+
+
+<template name="TaskLayout">
+  <div class="container">
+     
+    <header>
+      <button id="togglebtn">☰</button>
+      
+      
+      <!--Import materialize.css
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      Let browser know website is optimized for mobile
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+        
+  
+      <h1>Current Lava Flow ({{incompleteCount}})</h1><h1>{{currentUser.user}}</h1>
+
+     
+      <div class="logo">
+        <p><img src="/logo.png"/></p>
+      </div>
+      
+
+      <form class="new-task">
+        {{#if currentUser}}
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+        {{else}}
+        <p>Please login to add to add to the Lava Flow</p>
+        
+        {{/if}}
+      </form>
+  
+       
+    
+
+    </header>
+
+    
+
+
+<div class="listback">
+<ul>
+      
+        {{#each tasks}}
+
+          {{> task}}
+
+        {{/each}}
+        
+        
+</ul>
+
+</div>
+
+
+
+
+ <div class="footer">LAVA Version 0.2
+  <label class="hide-completed">
+
+        <input type="checkbox" />
+
+        Hide Completed Tasks
+
+      </label>
+</div>
+
+</div>
+
+</template>
+
+
+
+ 
+
+
+
+

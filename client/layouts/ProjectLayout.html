@@ -1,0 +1,76 @@
+
+
+
+
+
+<template name="ProjectLayout">
+  <div class="container">
+     
+    <header>
+      <button id="togglebtn">☰</button>
+      
+        
+  
+      <h1>Current Lava Flow ({{incompleteCount}})</h1><h1>{{currentUser.user}}</h1>
+
+     
+      <div class="logo">
+        <p><img src="/logo.png"/></p>
+      </div>
+      
+
+      <form class="new-task">
+        {{#if currentUser}}
+        <input type="text" name="text" placeholder="Type to create a new project" />
+        {{else}}
+        <p>Please login to create a new project</p>
+        
+        {{/if}}
+      </form>
+  
+       
+    
+
+    </header>
+
+    
+
+
+<div class="listback">
+<ul>
+      
+        {{#each tasks}}
+
+          {{> task}}
+
+        {{/each}}
+        
+        
+</ul>
+
+</div>
+
+
+
+
+ <div class="footer">LAVA Version 0.2
+  <label class="hide-completed">
+
+        <input type="checkbox" />
+
+        Hide Completed Tasks
+
+      </label>
+</div>
+
+</div>
+
+</template>
+
+
+
+ 
+
+
+
+

@@ -1,0 +1,48 @@
+
+
+<template name="task">
+                <!--adds the checked class which makes line through-->
+                <!--if the checked property of a task is true, the checked class is added to our list item.-->
+  <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+	  
+
+    <button class="delete">&times;</button>
+    <button class="complete">&check;</button>
+    <button class="pickup">&plus;</button>
+    
+
+
+ 
+    
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+        {{#if isOwner}}
+
+      <button class="toggle-private">
+
+        {{#if private}}
+
+          Private
+
+        {{else}}
+
+          Public
+
+        {{/if}}
+
+      </button>
+
+    {{/if}}
+
+
+    <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+    
+
+  </li>
+
+</template>
+
+
+
+
+
